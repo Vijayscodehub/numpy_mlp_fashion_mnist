@@ -46,6 +46,36 @@ Build one network only:
 8. Evaluate the selected model once on the untouched test set. Save learning
    curves, final accuracy, and a confusion matrix.
 
+## Current Progress
+
+Completed so far:
+
+- Prepared a fixed 55,000 / 5,000 / 10,000 train, validation, and test split.
+- Built the MLP forward pass, cross-entropy loss, manual backpropagation, and
+  mini-batch SGD with NumPy.
+- Verified one manual gradient against a numerical gradient estimate.
+- Trained for 10 epochs and evaluated validation data after each epoch.
+
+Current baseline settings:
+
+```text
+Hidden neurons: 128
+Batch size: 128
+Learning rate: 0.01
+Epochs: 10
+```
+
+Best validation result:
+
+```text
+Loss:     0.4832
+Accuracy: 83.26%
+Epoch:    10
+```
+
+The next experiment changes only the learning rate to `0.001`. Validation
+results will decide which setting is used for the one final test evaluation.
+
 ## Out Of Scope
 
 - PyTorch `nn.Module`, autograd, or optimizers for the MLP implementation.
